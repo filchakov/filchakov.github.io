@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2607dc38-c4cc-4a85-b47f-7c28433698ab" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
     </list>
     <ignored path="filchakov.github.io.iws" />
@@ -26,8 +27,8 @@
       <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="415">
-              <caret line="1111" column="36" selection-start-line="1111" selection-start-column="36" selection-end-line="1111" selection-end-column="36" />
+            <state relative-caret-position="310">
+              <caret line="1104" column="72" selection-start-line="1094" selection-start-column="8" selection-end-line="1104" selection-end-column="72" />
               <folding>
                 <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -59,10 +60,12 @@
                 <element signature="n#style#0;n#div#0;n#noscript#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="n#style#0;n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
                 <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-                <element signature="e#65526#65532#0" expanded="true" />
+                <element signature="e#65531#65537#0" expanded="true" />
                 <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <marker date="1476045145000" expanded="true" signature="62921:63361" ph="..." />
+                <marker date="1476045145000" expanded="true" signature="63026:63340" ph="{...}" />
+                <marker date="1476045145000" expanded="true" signature="63410:63424" ph="..." />
               </folding>
             </state>
           </provider>
@@ -155,12 +158,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1476043568332</updated>
-      <workItem from="1476043570950" duration="1071000" />
+      <workItem from="1476043570950" duration="1129000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1071000" />
+    <option name="totallyTimeSpent" value="1129000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1920" height="1080" extended-state="0" />
@@ -203,8 +206,8 @@
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="415">
-          <caret line="1111" column="36" selection-start-line="1111" selection-start-column="36" selection-end-line="1111" selection-end-column="36" />
+        <state relative-caret-position="310">
+          <caret line="1104" column="72" selection-start-line="1094" selection-start-column="8" selection-end-line="1104" selection-end-column="72" />
           <folding>
             <element signature="n#style#0;n#img#0;n#noscript#0;n#head#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#iframe#0;n#noscript#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -236,10 +239,12 @@
             <element signature="n#style#0;n#div#0;n#noscript#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#img#0;n#div#0;n#noscript#0;n#div#2;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#4;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="n#style#0;n#div#5;n#div#0;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#div#1;n#div#2;n#body#0;n#html#0;n#!!top" expanded="true" />
-            <element signature="e#65526#65532#0" expanded="true" />
+            <element signature="e#65531#65537#0" expanded="true" />
             <element signature="n#style#0;n#p#2;n#div#0;n#div#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <marker date="1476045145000" expanded="true" signature="62921:63361" ph="..." />
+            <marker date="1476045145000" expanded="true" signature="63026:63340" ph="{...}" />
+            <marker date="1476045145000" expanded="true" signature="63410:63424" ph="..." />
           </folding>
         </state>
       </provider>
