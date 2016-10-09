@@ -1,1 +1,1146 @@
-Hello World
+
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+
+    <title>Квитки на концерт Zaxidfest 2017 | Concert.UA</title>
+    <link rel="alternate"  media="only screen and (max-width: 640px)" href="//m.concert.ua/booking/zahidfest" >
+    <meta name="keywords" content="концерт Zaxidfest 2017, квиток на концерт, концерт Zaxidfest 2017 в Львові, Zaxidfest 2017 концерт Львів" />
+    <meta name="description" content="Придбати квитки на концерт Zaxidfest 2017 в Львові. Місця проведення: Біля Львова,початок 18 Августа 2017 в 09:00. Організатор: "/>
+    <meta name="publisher-url" content="concert.ua"/>
+    <meta name="og:title" content="Квитки на концерт Zaxidfest 2017"/>
+    <meta name="og:description" content="Придбати квитки на концерт Zaxidfest 2017 на Concert.UA. Місця проведення: Біля Львова, початок 18 Августа 2017 в 09:00"/>
+    <meta name='yandex-verification' content='5b65032306559a49' />
+    <meta name="apple-itunes-app" content="app-id=818711282">
+    <meta property="fb:admins" content="1612160641" />
+    <link rel="icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+    <link rel="apple-touch-icon" href="/img/app-icons/icon_57_57.png"/>
+    <link rel="apple-touch-icon" sizes="72x72" href="/img/app-icons/icon_72_72.png"/>
+    <link rel="apple-touch-icon" sizes="114x114" href="/img/app-icons/icon_114_114.png"/>
+
+    <meta name="msapplication-TileImage" content="/img/app-icons/icon_114_114.png"/>
+    <meta name="msapplication-TileColor" content="#d91f26"/>
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/canvas.min.css?05072016" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/jquery.formstyler.min.css?1834052016" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/tipTip.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/jquery.fancybox.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/jquery.fancybox-buttons.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/jquery.autocomplete.min.css" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/fonts.min.css?27052016" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/main.min.css?26092016" />
+    <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/modal.min.css?27052016" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+    <link type="text/css" rel="stylesheet" href="https://www.concert.ua/css/vendor/jquery.jscrollpane.css"/>
+
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery-1.7.2.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery.formstyler.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery-ui.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/concert.modal.min.js?27052016"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/concert.common.min.js?01062016"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery.tipTip.js"></script>
+    <script type="text/javascript">
+    var messageText = "Повідомлення",
+            selectTicketsText = "Будь ласка, виберіть хоча б один квиток",
+            extendedTicketLimitText = "Перевищено ліміт квитків",
+            moreThen10Text = "За одне замовлення можна оформити не більше 10 квитків",
+            choiseDeliveryMethodText = "Виберіть спосіб доставки",
+            choisePaymentMethodText = "Виберіть спосіб оплати",
+            singleTicketText = "квиток",
+            fewTicketText = "квитка",
+            manyTicketText = "квитків",
+            priceText = " | Вартість:",
+            payText = "Оплатити",
+            reservText = "Зарезервувати",
+            issueText = "Оформити",
+            warningText = "Попередження",
+            loseTicketsText = "При поверненні на перший крок раніше обрані вами квитки будуть анульовані.",
+            errorFoundText = "Виявлено ошибка",
+            fillAllFieldsText = "Для переходу на наступній крок необхідно заповнити всі необхідні поля",
+            deliveryDesabledText = "Вибачте, за даною адресою доставка не здійснюється",
+            wrongDeliveryPeriodText = "Вибачте, товар не може бути доставлений вчасно",
+            errorText = "Помилка",
+            notEmptyDiscountFieldText = "Поле для введення знижки не може бути порожнім",
+            deleteDiscountText = "Видалення знижки",
+            deteteDiscountConfirmText = "* Неверний формат E-mail<br/>",
+
+            formNameRequiredText = "* Ім'я обов'язково для заповнення, і повинно бути не менше 2-х букв <br/>",
+            formNameOnlyLetterText = "* Ім'я може містити тільки букви <br/>",
+            formLastnameRequiredText = "* Прізвище обов'язкове для заповнення <br/>",
+            formLastnameOnlyLetterText = "* Прізвище може містити тільки букви <br/>",
+            formEmailRequiredText = "* Електронна пошта обов'язковою для заповнення <br/>",
+            formEmailWrongFormatText = "* Невірний формат електронної пошти <br/>",
+            formEmail2RequiredText = "* Повторний e-mail обов'язковою для заповнення <br/>",
+            formEmail2OnlyLetterText = "* Повторний е-mail не збігається <br/>",
+            formNumberRequiredText = "* Номер телефону обов'язковою для заповнення <br/>",
+            formNumberWrongFormatText = "* Номер не може бути менше 12 цифр, або містити літери <br/>",
+            formWrongFormatAzD = "* Номер дому і приміщення може містити лише літери, цифри, символи '/' та '–' <br/>",
+            formStreetAzD = "* Назва вулиці може містити лише літери, цифри, символи '/' та '-' <br/>",
+            formCommentAzD = "* Коментар може містити лише літери, цифри, символи: -/+ .,;:'\"()*&#№@!_=<br/>",
+            formStreetIdText = "* Почніть вводити назву вулиці і оберіть зі списку, що пропонується <br/>",
+            formCorrectedText = "<b>! Ми видалили все зайве.<br \>&nbsp; Будь ласка, перевірте і спробуйте ще раз</b> <br/>",
+            formErrorsText = "<b>! Будь ласка, перевірте і спробуйте ще раз</b> <br/>",
+            formStreetRequiredText = "* При доставці кур'єром вулиця обов'язкова для заповнення <br/>",
+            formStreetWrongFormatText = "* Назва вулиці має складатися лише з літер, довжина (від 2 до 40 літер) <br/>",
+            formHouseRequiredText = "* При доставці кур'єром будинок обов'язковий для заповнення <br/>",
+            formHouseWrongFormatText = "* При доставці кур'єром квартира обов'язкова для заповнення <br/>",
+            formIndexRequiredText = "* При доставці кур'єром індекс обов'язковій для заповнення <br/>",
+            formIndexWrongFormatText = "* Індекс не може бути не менше 5 цифр, або містити літери <br/>",
+            formCountryRequiredText = "* Необхідно вибрати країну <br/>",
+            formRegionRequiredText = "* Необхідно вибрати область <br/>",
+            formCityRequiredText = "* Необхідно вибрати місто <br/>",
+            formMobileOperatorRequiredText = "* Необхідно вибрати мобільного оператора <br/>",
+            formMobileCodeRequiredText = "* Код оператора обов'язковою для заповнення<br/>",
+            formMobileCodeWrongFormatText = "* Код оператора не може містити букв, повинен бути не менше 3-ох символів, і повинен починатися з 0<br/>",
+
+            rowText = "Ряд ",
+            placeText = "Місце ",
+            placePrice = "Ціна",
+            placesLeft = "Залишок",
+            placesAmount = "шт.",
+            placesPriceAfter = "грн.",
+            emptyQuoteText = "На цей товар немає квоти продажів",
+            ticketLimitWithoutPlaceText = "Вибачте, але за одне замовлення можна купити не більше дев'яти квитків без місць.",
+            noPlacesInSectorText = "Вибачте, вільних місць в секторі більше немає",
+            ticketLimitWithPlaceText = "",
+            priceSchemaText = " Ціна: ",
+            freeSchemaText = " Вільно: ",
+
+
+            cabinetSingUpSuccessText = "ВХІД ЗДІЙСНЕНО",
+            cabinetEnterInSystemLikeText = "Ви увійшли в систему як ",
+            cabinetGoToText = "Перейти в особистий кабінет",
+            cabinetStopUsingText = "Ви дійсно не хочете використовувати Особистий кабінет? \ nЯкщо ви погодитеся, ви більше не зможете його використовувати!",
+            cabinetFillAllFieldsText = "Заповніть всі поля!",
+            cabinetSelectOperatorText = "Виберіть оператора мобильной зв'язку!",
+            cabinetEnterTheCityText = "Ви повинні вказати місто!",
+            cabinetToShortPassText = "Пароль повинен містити не менше 6 символів",
+            cabinetPassDiffText = "Паролі не збігаються",
+            forOrderTicketsYouHaveText = "Для оформлення квитків на подію Вас буде перенаправлено на російську версію сайта за 5 секунд.",
+            deliveryCrimea = "Доставка кур’єром в Автономну Республіку Крим здійснюється тільки після передоплати";
+    allDatesText = "Всі дати";
+    inOrder = " у замовленнi";
+    inOrderWithDiscount = " зi знижкою";
+    warrantyRefundDisabledDialogLabel = "ОТКАЗАТЬСЯ ОТ ГАРАНТИИ ВОЗВРАТА";
+    warrantyRefundDisabledDialogText = "<b>Обратите внимание:</b> возврат номинальной стоимости билетов по Вашему запросу возможен только при условии оплаты услуги «Гарантия возврата». Если Вы откажетесь от услуги, мы не гарантируем возврат, кроме случая отмены мероприятия (тогда согласно украинского законодательства обязательства по возврату несет организатор мероприятия).";
+
+    ""</script>
+
+    <script type="text/javascript" src="https://www.concert.ua/js/plugins.min.js?1834052016"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/phone-panel.min.js?1834052016"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/search.min.js?1834052016"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/user.min.js?02062016"></script>
+    <script src="https://vk.com/js/api/openapi.js?1834052016" type="text/javascript" charset="windows-1251"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery.fancybox.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery.fancybox-buttons.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery.mousewheel-3.0.6.pack.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/jquery.maskedinput.min.js"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/form-validate.js?020620161"></script>
+    <script type="text/javascript" src="https://www.concert.ua/js/vendor/jquery.jscrollpane.js"></script>
+
+    <script type="text/javascript">
+        var baseDomain = "concert.ua";
+    </script>
+    <script>
+        var _gaq = _gaq || [];
+        _gaq.push(['_setAccount', 'UA-33360574-1']);
+        _gaq.push(['_setDomainName', 'concert.ua']);
+        _gaq.push(['_trackPageview']);
+
+    </script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+        ga('create', 'UA-33360574-1', 'concert.ua');
+        ga('require', 'displayfeatures');
+        ga('send', 'pageview');
+    </script>
+
+    <script src="https://www.concert.ua/js/ga.events.js?04052016"></script>
+
+    <!-- Facebook audience -->
+    <script>(function() {
+        var _fbq = window._fbq || (window._fbq = []);
+        if (!_fbq.loaded) {
+            var fbds = document.createElement('script');
+            fbds.async = true;
+            fbds.src = '//connect.facebook.net/en_US/fbds.js';
+            var s = document.getElementsByTagName('script')[0];
+            s.parentNode.insertBefore(fbds, s);
+            _fbq.loaded = true;
+        }
+        _fbq.push(['addPixelId', '1012973845404126']);
+    })();
+    window._fbq = window._fbq || [];
+    window._fbq.push(['track', 'PixelInitialized', {}]);
+    </script>
+    <noscript><img height="1" width="1" alt="" style="display:none" src="https://www.facebook.com/tr?id=1012973845404126&amp;ev=PixelInitialized" /></noscript>
+    <!-- /Facebook audience -->
+
+    <script type="application/ld+json">
+    
+    {"@context": "http://schema.org",
+        "@type": "Organization",
+        "name": "Билетный оператор Concert.ua",
+        "url": "http://www.concert.ua/",
+        "logo": "http://www.concert.ua/img/logo.png",
+        "description": "Крутой билетный оператор. Афиша и билеты на концерты, фестивали, в театр и оперу, на новогодние представления и в цирк, билеты на семинары и тренинги. Электронные билеты на емейл или с доставкой курьером",
+        "telephone": "+380442220022",
+        "email": "info@concert.ua",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress" : "ул. Дмитриевская, 66а",
+            "addressLocality" : "Киев",
+            "addressCountry" : "Украина"
+        },
+        "hasPOS":  [{
+            "@type": "Place",
+            "name": "Центральная касса Concert.ua в Киеве",
+            "telephone": "+380442220022",
+            "url": "http://www.concert.ua/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress" : "клуб Sentrum, ул. Шота Руставели, 11а",
+                "addressLocality" : "Киев",
+                "addressCountry" : "Украина"
+                }
+            },{
+            "@type": "Place",
+            "name": "Центральна каса Concert.ua у Львові",
+            "telephone": "+380962220022",
+            "url": "http://lvov.concert.ua/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress" : "Сувенірна Гільдія, Площа Ринок, вул. Шевська 2",
+                "addressLocality" : "Львів",
+                "addressCountry" : "Україна"
+                }
+            },{
+            "@type": "Place",
+            "name": "Центральная касса Concert.ua в Харькове",
+            "telephone": "+380962220022",
+            "url": "http://kharkov.concert.ua/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress" : "Мой Билет, ул. Пушкинская, 5",
+                "addressLocality" : "Харьков",
+                "addressCountry" : "Украина"
+                }
+            },{
+            "@type": "Place",
+            "name": "Центральная касса Concert.ua в Днепропетровске",
+            "telephone": "+380962220022",
+            "url": "http://dnepr.concert.ua/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress" : "Магазин Мясо, ТЦ GRAND PLAZA, пр. Карла Маркса, 67д",
+                "addressLocality" : "Днепропетровск",
+                "addressCountry" : "Украина"
+                }
+            },{
+            "@type": "Place",
+            "name": "Центральна каса Concert.ua в Тернополі",
+            "telephone": "+380962220022",
+            "url": "http://ternopol.concert.ua/",
+            "address": {
+                "@type": "PostalAddress",
+                "streetAddress" : "Скейтшоп Бумеранг, Руська, 44",
+                "addressLocality" : "Тернопіль",
+                "addressCountry" : "Україна"
+                }
+            }
+        ]
+    }
+
+  </script></head>
+<body >
+
+
+<!-- Google Tag Manager -->
+<noscript><iframe src="//www.googletagmanager.com/ns.html?id=GTM-PTS2CJ"
+                  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-PTS2CJ');</script>
+<!-- End Google Tag Manager -->
+
+
+<div class="map-overlay"></div>
+<div id="booking-loading">
+    <div><svg id="concert-loader" width="150" height="150" xmlns="http://www.w3.org/2000/svg"><g class="rotate-slow"><polygon points="75 0 80 6.6 85.9 0.8 89.9 8 96.6 3.2 99.5 10.9 106.9 7.1 108.6 15.2 116.4 12.4 117 20.7 125.1 19.2 124.4 27.4 132.7 27.1 130.9 35.1 139 36 136.1 43.7 144.1 45.7 140 52.9 147.6 56.1 142.5 62.6 149.6 66.9 143.6 72.6 150 77.8 143.3 82.6 148.8 88.7 141.4 92.5 146 99.4 138.2 102 141.8 109.4 133.6 110.9 136 118.8 127.8 119.1 129 127.2 120.8 126.3 120.9 134.6 112.9 132.4 111.7 140.6 104.2 137.3 101.8 145.2 94.8 140.9 91.3 148.4 85 143.1 80.5 150 75 143.8 69.5 150 65 143.1 58.7 148.4 55.2 140.9 48.2 145.2 45.8 137.3 38.3 140.6 37.1 132.4 29.1 134.6 29.2 126.3 21 127.2 22.2 119.1 14 118.8 16.4 110.9 8.2 109.4 11.8 102 4 99.4 8.5 92.5 1.2 88.7 6.7 82.6 0 77.8 6.4 72.6 0.4 66.9 7.5 62.6 2.4 56.1 10 52.9 5.9 45.7 13.9 43.7 10.9 36 19.1 35.1 17.3 27.1 25.5 27.4 24.9 19.2 33 20.7 33.6 12.4 41.4 15.2 43.1 7.1 50.5 10.9 53.4 3.2 60.1 8 64.1 0.8 70 6.6 " fill="#D81F26" id="_x31_"/></g><g id="white"><path d="m99 32c-2.9 0.1-5.2 2.5-5.2 5.4l0 32.2 10.7 0 0-32.2c0-2.9-2.3-5.3-5.2-5.4 -0.2 0-0.3 0-0.4 0m-32 21.5l0 0c-2.9 0-5.4 2.4-5.4 5.4l0 10.7 10.7 0 0-10.7c0-2.9-2.4-5.4-5.4-5.4zm-16.3-21.5c-2.9 0.1-5.2 2.5-5.2 5.4l0 5.4c0 15.2 0 30.4 0 45.6 0 16 12.9 29.2 28.9 29.5 0.4 0 0.8 0 1.2 0 16-0.3 29-13.5 29-29.5 0-4.5 0-8.9 0-13.4l-43 0c0.1 7.5 3.2 10.7 10.7 10.7l21.5 0 0 2.7c0 10.2-8.2 18.5-18.3 18.8 -0.3 0-0.6 0-0.8 0 -10.2-0.2-18.4-8.6-18.4-18.8 0-15.2 0-30.4 0-45.6l0-5.4c0-2.9-2.3-5.3-5.2-5.4 -0.1 0-0.3 0-0.4 0zm27 26.8l0 10.7 10.7 0 0-10.7c0-2.9-2.4-5.4-5.4-5.4 -3 0-5.4 2.4-5.4 5.4z" fill="#FFFFFF" id="_x32_"/></g></svg></div>
+</div>
+<input id="lng" type="hidden" value="ua" />
+<div id="wrapper">
+    <script src="https://www.concert.ua/js/jquery.maskedinput.js" async></script>
+    <input type="hidden" class="call-center-is-working-now" value="0"><header>
+    <div class="container">
+        <a href="//concert.ua/ua/main" class="header-logo"><div class="header-logo-img icon"></div></a>
+
+        <div class="links">
+            <ul class="user_actions" id="user_act">
+                <li><a href="javascript:void(0)" class="head-city"><i class="fa fa-lg fa-map-marker"></i> Оберіть місто</a></li>
+                <li><a href="javascript:void(0)" class="headico-select">Підібрати подію</a></li>
+                <li><a href="javascript:void(0)" class="headico-phone">&nbsp;</a></li>
+                <li>
+                    <form action="//concert.ua/ua/search_result" method="get">
+                        <input type="text" id="search" name="search_query" placeholder="Подія / Артист" axlength="60" class="ui-autocomplete-input" autocomplete="off" role="textbox" aria-autocomplete="list" aria-haspopup="true">
+                        <a href="#" id="search_ico" class="sub"></a>
+                    </form>
+                </li>
+
+                <li><a href="javascript:void(0)" id="enter_but" class="login"><i class="fa fa-lg fa-user"></i>Ввійти</a></li>
+
+                <li id="last"><a href="javascript:void(0)" class="head-menu"><i class="fa fa-2x fa-bars"></i></a></li>
+            </ul>
+        </div>
+    </div>
+    <div id="citylist_content" class="mn-overlay">
+        <div class="overlay-container">
+            <div class="bclse"><i class="icon close"></i></div>
+            <div class="content">
+                <div class="top"><h2>Оберіть місто</h2></div>
+                <div class="scrollable">
+                    <ul class="main two-columns">
+                        <li><a href="#" style="font-weight: bold" onclick="menuCityFilter()">Всі міста</a></li>
+                        <li><a href="//kiev.concert.ua/ua" class="" >Киев</a></li>
+                        <li><a href="//odessa.concert.ua/ua" class="" >Одесса</a></li>
+                        <li><a href="//kharkov.concert.ua/ua" class="" >Харьков</a></li>
+                        <li><a href="//dnepr.concert.ua/ua" class="" >Днепр</a></li>
+                        <li><a href="//lvov.concert.ua/ua" class="" >Львов</a></li>
+                        <li><a href="//.concert.ua/ua" class="" >c.Пилипець</a></li>
+                        <li><a href="//belaya-tserkov.concert.ua/ua" class="" >Белая Церковь</a></li>
+                        <li><a href="//berdyansk.concert.ua/ua" class="" >Бердянск</a></li>
+                        <li><a href="//boruspil.concert.ua/ua" class="" >Борисполь</a></li>
+                        <li><a href="//vinnitsa.concert.ua/ua" class="" >Винница</a></li>
+                        <li><a href="//zhitomir.concert.ua/ua" class="" >Житомир</a></li>
+                        <li><a href="//zaporozhye.concert.ua/ua" class="" >Запорожье</a></li>
+                        <li><a href="//ivano-frankovsk.concert.ua/ua" class="" >Ивано-Франковск</a></li>
+                        <li><a href="//k-podolskiy.concert.ua/ua" class="" >Каменец-Подольский</a></li>
+                        <li><a href="//dniprodzerzhunsk.concert.ua/ua" class="" >Каменское</a></li>
+                        <li><a href="//kremenchug.concert.ua/ua" class="" >Кременчуг</a></li>
+                        <li><a href="//kropyvnytskyi.concert.ua/ua" class="" >Кропивницкий</a></li>
+                        <li><a href="//lutsk.concert.ua/ua" class="" >Луцк</a></li>
+                        <li><a href="//lviv.concert.ua/ua" class="" >Львів</a></li>
+                        <li><a href="//mariupole.concert.ua/ua" class="" >Мариуполь</a></li>
+                        <li><a href="//nikolaev.concert.ua/ua" class="" >Николаев</a></li>
+                        <li><a href="//pereyaslavl.concert.ua/ua" class="" >Переяслав-Хмельницкий</a></li>
+                        <li><a href="//poltava.concert.ua/ua" class="" >Полтава</a></li>
+                        <li><a href="//rovno.concert.ua/ua" class="" >Ровно</a></li>
+                        <li><a href="//polyana.concert.ua/ua" class="" >с. Поляна</a></li>
+                        <li><a href="//sumy.concert.ua/ua" class="" >Сумы</a></li>
+                        <li><a href="//ternopol.concert.ua/ua" class="" >Тернополь</a></li>
+                        <li><a href="//tur.concert.ua/ua" class="" >Тур</a></li>
+                        <li><a href="//uzhhorod.concert.ua/ua" class="" >Ужгород</a></li>
+                        <li><a href="//fastiv.concert.ua/ua" class="" >Фастов</a></li>
+                        <li><a href="//kherson.concert.ua/ua" class="" >Херсон</a></li>
+                        <li><a href="//khmelnitsky.concert.ua/ua" class="" >Хмельницкий</a></li>
+                        <li><a href="//cherkassy.concert.ua/ua" class="" >Черкассы</a></li>
+                        <li><a href="//chernigov.concert.ua/ua" class="" >Чернигов</a></li>
+                        <li><a href="//chernovtsy.concert.ua/ua" class="" >Черновцы</a></li>
+                        <li><a href="//chernomorsk.concert.ua/ua" class="" >Черноморск</a></li>
+                        <li><a href="//chertkiv.concert.ua/ua" class="" >Чертков</a></li>
+                    </ul>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <div id="ctglist_content" class="mn-overlay">
+        <div class="overlay-container">
+            <div class="bclse"><i class="icon close"></i></div>
+            <div class="content">
+                <div class="top">
+                    <div style="float:left; width: 45%">
+                        <h2>ОБЕРІТЬ РУБРИКУ</h2>
+                    </div>
+                    <div style="float:left; width: 45%">
+                        <h2>ОБЕРІТЬ МІСЯЦЬ</h2>
+                    </div>
+                </div>
+
+                <div class = "scrollable">
+                    <div style="float:left; width: 45%">
+                        <ul class="main wd">
+                            <li><a href="#" data-tp="ctg"  data-alias="" data-val="0" onclick="menuEventFilter(this)"><i class="fa fa-dot-circle-o fa-lg"></i> Всі рубрики</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="festivals" data-val="9" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Фестивалі</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="rock" data-val="7" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Рок</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="pop" data-val="2" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Поп</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="theater" data-val="11" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Театри</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="kids" data-val="15" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Дітям</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="electronic" data-val="3" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Вечірки</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="dance" data-val="4" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Танці</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="quests" data-val="10" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Квести</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="excursions" data-val="12" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Екскурсії</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="chanson" data-val="5" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Шансон</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="novyi-god" data-val="8" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Новий Рік</a></li>
+                            <li><a href="#" data-tp="ctg" data-alias="other" data-val="6" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Інше</a></li>
+                        </ul>
+                    </div>
+
+                    <div style="float:left; width: 45%">
+                        <ul class="main wd">
+                            <li><a href="#" data-tp="mnth" data-val="0" data-alias="" onclick="menuEventFilter(this)"><i class="fa fa-dot-circle-o fa-lg"></i> Всі дати</a></li>
+                            <li><a href="#" data-alias="January" data-tp="mnth" data-val="01" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Січень</a></li>
+                            <li><a href="#" data-alias="February" data-tp="mnth" data-val="02" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Лютий</a></li>
+                            <li><a href="#" data-alias="March" data-tp="mnth" data-val="03" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Березень</a></li>
+                            <li><a href="#" data-alias="April" data-tp="mnth" data-val="04" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Квітень</a></li>
+                            <li><a href="#" data-alias="May" data-tp="mnth" data-val="05" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Травень</a></li>
+                            <li><a href="#" data-alias="June" data-tp="mnth" data-val="06" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Червень</a></li>
+                            <li><a href="#" data-alias="July" data-tp="mnth" data-val="07" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Липень</a></li>
+                            <li><a href="#" data-alias="August" data-tp="mnth" data-val="08" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Серпень</a></li>
+                            <li><a href="#" data-alias="September" data-tp="mnth" data-val="09" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Вересень</a></li>
+                            <li><a href="#" data-alias="October" data-tp="mnth" data-val="10" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Жовтень</a></li>
+                            <li><a href="#" data-alias="November" data-tp="mnth" data-val="11" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Листопад</a></li>
+                            <li><a href="#" data-alias="December" data-tp="mnth" data-val="12" onclick="menuEventFilter(this)"><i class="fa fa-circle-o fa-lg"></i> Грудень</a></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="bottom" style="text-align: right;">
+                    <div id="btnShowResult">
+                        <a href="">Відобразити <small>()</small></a>
+                    </div>
+                </div>
+
+
+                <script>
+                    var filterCat = '';
+                    var filterCity = '';
+                    var filterMonth = '';
+                </script>
+            </div>
+        </div>
+    </div>
+
+    <div id="phones_content" class="mn-overlay">
+        <div class="overlay-container">
+            <div class="bclse"><i class="icon close"></i></div>
+            <div class="content">
+                <h2>Наші контакти</h2>
+
+                <p>З радістю відповімо и допоможемо з 09:00 до 20:00 (Пн - Пт) / з 10:00 до 19:00 (Сб - Нд)</p>
+
+                <ul class="phones">
+                    <li><span class="ico-phone-hm">044 222 00 22</span></li>
+                    <li><span class="ico-phone-lf">063 655 99 33</span></li>
+                    <li><span class="ico-phone-mt">095 655 99 33</span></li>
+                    <li><span class="ico-phone-ks">096 655 99 33</span></li>
+                    <li><a href="/contactus" class="ico-phone-ml">Написати email</a></li>
+                    <li>
+                        <table style="position: fixed; margin-top: -34px; display: none">
+                            <tr>
+                                <td style="width: 50px">
+                                    <div class="call-me-back-icon-wrapper">
+                                        <img src="https://www.concert.ua/static/img/contact/call-me-black.png">
+                                    </div>
+                                </td>
+                                <td>
+                                    <div class="call-me-back-block">
+                                        <div class="call-me-back-link">
+                                            Передзвонiть менi
+                                        </div>
+                                        <div class="call-me-back-form">
+                                            <div class="call-me-back-body">
+                                                <input type="text" class="call-me-back-phone">
+                                                <div class="call-me-back-run-button">
+                                                    <i class="fa fa-phone fa-2x"></i>
+                                                </div>
+                                                <input type="hidden" class="call-me-back-id" value="1">
+                                            </div>
+                                            <div class="call-me-back-footer">
+                                                <div class="call-me-back-status">
+                                                    <div class="call-me-back-status-in-progress">
+                                                        Дзвонимо ...
+                                                        <strong class="call-me-back-timer">0</strong>
+                                                    </div>
+                                                    <div class="call-me-back-status-success">
+                                                        Додзвонилися! :)
+                                                    </div>
+                                                    <div class="call-me-back-status-failed">
+                                                        Не додзвонилися! :(
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </td>
+                            </tr>
+                        </table>
+                        <script type="text/javascript" src="https://www.concert.ua/js/call-me-back/script.js?v=02062016"></script>
+                    </li></ul>			</div>
+        </div>
+    </div>
+
+    <div id="auth_content" class="mn-overlay">
+        <div class="overlay-container">
+            <div class="bclse"><i class="icon close"></i></div>
+            <div class="content">
+                <h2>ВХІД</h2>
+
+                <div id="auth">
+                    Якщо Ви раніше оформляли замовлення на Concert.ua <br> або V-Ticket.com.ua, увійдіть в кабінет. Там зберігаються всі сплачені квитки.
+
+                    <form method="POST" onsubmit="return false">
+
+                        <span id="success_auth"></span>
+                        <input type="text" placeholder="Введите email" name="email" id="email_auth" autocomplete="off">
+                        <input type="password" placeholder="Пароль" name="password" id="pass" autocomplete="off">
+                        <p id="pass_recovery"><a href="javascript:;">Забули пароль?</a></p>
+
+                        <p class="error" id="error"></p>
+                        <input class="submit" type="submit" name="submit" id="send_auth" value="Ввійти">
+                        <input class="submit" type="submit" name="close_auth" id="close_auth" style="display: none" value="ОK">
+
+                    </form>
+
+                    <p id="info">* Логін - це Email, котрий Ви виеористовували при оформлені замовлення.<br>Пароль ми відправляли Вам листом.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="info_content" class="mn-overlay">
+        <div class="overlay-container">
+            <div class="bclse"><i class="icon close"></i></div>
+            <div class="content">
+                <div style="width: 100%; padding-top: 40px;">
+                    <div class="span3">
+                        <h2>Мова</h2>
+                        <ul class="inl">
+                            <li><a href="/booking/zahidfest">Рус</a></li>
+                            <li>/ &nbsp; <a href="/ua/booking/zahidfest">Укр</a></li>
+                            <li>/ &nbsp; <a href="/en/booking/zahidfest">Eng</a></li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <h2>Ми в соц мережах</h2>
+                        <ul class="inl">
+                            <li> <a href="http://www.facebook.com/concert.ua"><i class="fa fa-concert fa-facebook"></i></a></li>
+                            <li> <a href="http://vk.com/concertua"><i class="fa fa-concert fa-vk"></i></a></li>
+                            <li> <a href="http://instagram.com/concert_ua"><i class="fa fa-concert fa-instagram"></i></a></li>
+                            <li> <a href="https://plus.google.com/112482634162851147540"><i class="fa fa-concert fa-google-plus"></i></a></li>
+                        </ul>
+                    </div>
+                </div>
+                <br clear="all">
+                <div style="margin-top: 95px">
+                    <div class="span3">
+                        <ul>
+                            <li><a href="//concert.ua/ua/about_system">Про нас</a></li>
+                            <li><a href="//concert.ua/ua/to_organizers">Організаторам</a></li>
+                            <li><a href="//concert.ua/ua/review">Відгуки</a></li>
+                            <li><a href="//concert.ua/ua/contactus">Контакти</a></li>
+                            <li><a href="//concert.ua/ua/placeofsale">Каси</a></li>
+                            <li><a href="//concert.ua/ua/places">Зали</a></li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <ul>
+                            <li><a href="//concert.ua/ua/opt">Колективні замовлення</a></li>
+                            <li><a href="//concert.ua/ua/guaranty_ticket">Гарантії</a></li>
+                            <li><a href="//concert.ua/ua/payment_page">Способи оплати</a></li>
+                            <li><a href="//concert.ua/ua/delivery">Доставка</a></li>
+                            <li><a href="//concert.ua/ua/faq">Запитання та відповіді</a></li>
+                        </ul>
+                    </div>
+                    <div class="span3">
+                        <ul>
+                            <li><a href="//concert.ua/ua/vozvrat">Повернення</a></li>
+                            <li><a href="//concert.ua/ua/archive">Архів концертів</a></li>
+                            <li><a href="//concert.ua/ua/sitemap">Карта сайту</a></li>
+                            <li><a href="//concert.ua/ua/go-green">Зелена ініціатива</a></li>
+                            <li><a href="//concert.ua/ua/offer">Публічна оферта</a></li>
+                        </ul>
+                    </div>
+                </div>			</div>
+        </div>
+    </div>
+
+    <div id="auth_recovery_content" class="mn-overlay">
+        <div class="overlay-container">
+            <div class="bclse"><i class="icon close"></i></div>
+            <div class="content">
+                <h2>ВІДНОВЛЕННЯ ПАРОЛЯ</h2>
+
+                <div id="auth">
+                    Введіть Email, що вказувався Вами під час оформлення замовлення <br> на Concert.ua чи V-Ticket.com.ua.
+
+                    <form method="POST" onsubmit="return false">
+
+
+                        <input type="text" name="email" id="email_recovery" autocomplete="off"/>
+
+
+                        <p class="error" id="recov_error"></p>
+                        <input class="submit" type="submit" name="submit" id="send_recovery" value="ВІДПРАВИТИ " />
+                        <input class="submit" type="submit" name="close_auth" id="close_rec" style="display: none" value="ОK">
+
+
+                    </form>
+
+                    <p id="info">* Логін - це Email, котрий Ви виеористовували при оформлені замовлення.<br>Пароль ми відправляли Вам листом.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+</header>
+
+    <div class="main-wrap">
+        <div id="header">
+            <ul id="navigation">
+                <li class="step small-block last-done"><a href="/ua/eventpage/zahidfest"><div class="step-alias">До опису</div></a></li>
+                <li class="step current"><a href="#"><span>1</span><div class="step-alias">Вибір квитка</div></a></li>
+                <li class="step "><a href="#"><span>2</span><div class="step-alias">Оформлення</div></a></li>
+                <li class="step"><a href="#"><span>3</span><div class="step-alias">Оплата</div></a></li>
+                <li class="step no-bg"><a href="#"><span>4</span><div class="step-alias">Підтверждення</div></a></li>
+                <div class="clr"></div>
+            </ul>
+        </div>
+        <input type="hidden" id="is_local" value="" />
+        <input type="hidden" id="is_test" value="" />
+        <div class="event-information">
+            <div class="event-logo" style="background-image: url('/dynamic/event/thumb_012564_original.jpg?v=6bf3ddf46db5'); border-radius: 50%; border: 3px solid rgba(255,255,255,0.6)">
+            </div>
+            <div class="event-top">
+                <div class="event-date">
+                    <div class="event-day">18</div>
+                    <div class="event-date-datails">
+                        <div class="event-month">Серпня</div>
+                        <div class="event-week">П’ятниця</div>
+                        <div class="event-time">09:00</div>
+                    </div>
+                </div>
+                <div class="event-title">Zaxidfest 2017</div>
+
+                <div class="event-location">
+                    <div class="event-venue">
+                        <a href="javascript:;"><span itemprop="name">Біля Львова</span>
+                        </a>
+                    </div>
+                    <div class="event-city">Львів, Біля Львова</div>
+                </div>
+                <div class="event-rubric"></div>
+            </div>
+            <div class="clr"></div>
+        </div>
+        <div class="content">
+
+            <script type="text/javascript">
+                var bookingFee = new Array();
+                bookingFee[440076] = new Array();
+                bookingFee[440076]['v-ticket'] = {
+                    'type' : 'percents',
+                    'percents' : 3.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['courier'] = {
+                    'type' : 'percents_plus',
+                    'percents' : 2.99,
+                    'amount' : 10.00
+                };
+                bookingFee[440076]['liqpay'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['webmoney'] = {
+                    'type' : 'percents',
+                    'percents' : 2.99,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['free'] = {
+                    'type' : 'amount',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['osmp'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['offline'] = {
+                    'type' : 'amount',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['card'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['WMTerminals'] = {
+                    'type' : 'percents',
+                    'percents' : 2.99,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['platon'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['pumb'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['test'] = {
+                    'type' : 'percents',
+                    'percents' : 2.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['paypal'] = {
+                    'type' : 'both',
+                    'percents' : 1.00,
+                    'amount' : 0.30
+                };
+                bookingFee[440076]['platonFOP'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['wayforpay'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['NonStop24'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440076]['payparts'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077] = new Array();
+                bookingFee[440077]['v-ticket'] = {
+                    'type' : 'percents',
+                    'percents' : 3.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['courier'] = {
+                    'type' : 'percents_plus',
+                    'percents' : 2.99,
+                    'amount' : 10.00
+                };
+                bookingFee[440077]['liqpay'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['webmoney'] = {
+                    'type' : 'percents',
+                    'percents' : 2.99,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['free'] = {
+                    'type' : 'amount',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['osmp'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['offline'] = {
+                    'type' : 'amount',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['card'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['WMTerminals'] = {
+                    'type' : 'percents',
+                    'percents' : 2.99,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['platon'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['pumb'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['test'] = {
+                    'type' : 'percents',
+                    'percents' : 2.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['paypal'] = {
+                    'type' : 'both',
+                    'percents' : 1.00,
+                    'amount' : 0.30
+                };
+                bookingFee[440077]['platonFOP'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['wayforpay'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['NonStop24'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[440077]['payparts'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382] = new Array();
+                bookingFee[445382]['v-ticket'] = {
+                    'type' : 'percents',
+                    'percents' : 3.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['courier'] = {
+                    'type' : 'percents_plus',
+                    'percents' : 2.99,
+                    'amount' : 10.00
+                };
+                bookingFee[445382]['liqpay'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['webmoney'] = {
+                    'type' : 'percents',
+                    'percents' : 2.99,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['free'] = {
+                    'type' : 'amount',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['osmp'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['offline'] = {
+                    'type' : 'amount',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['card'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['WMTerminals'] = {
+                    'type' : 'percents',
+                    'percents' : 2.99,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['platon'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['pumb'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['test'] = {
+                    'type' : 'percents',
+                    'percents' : 2.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['paypal'] = {
+                    'type' : 'both',
+                    'percents' : 1.00,
+                    'amount' : 0.30
+                };
+                bookingFee[445382]['platonFOP'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['wayforpay'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['NonStop24'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+                bookingFee[445382]['payparts'] = {
+                    'type' : 'percents',
+                    'percents' : 0.00,
+                    'amount' : 0.00
+                };
+            </script>
+            <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/blitzer/jquery-ui.css" />
+            <link rel="stylesheet" type="text/css" href="https://www.concert.ua/css/scheme-concert.css" />
+            <script type="text/javascript" src="https://www.concert.ua/js/timer.js" ></script>
+            <script type="text/javascript" src="https://www.concert.ua/js/maphilight.js"></script>
+            <script type="text/javascript" src="https://www.concert.ua/js/concert.scheme.js?27052016"> </script>
+            <script type="text/javascript" src="https://www.concert.ua/js/concert.event-main.js?19072016"></script>
+            <script type="text/javascript" src="https://www.concert.ua/js/browserDetect.js"> </script>
+            <form id="cart-form" method="post" action="">
+                <input type="hidden" id="partner_id" name="partner_id" value="0" />
+                <input type="hidden" id="external_id" name="external_id" value="0" />
+                <input type="hidden" id="ib_scheme" name="ib_scheme" value="0" />
+                <input type="hidden" id="session_id" name="session_id" value="0" />
+                <input type="hidden" id="karabas_order_id" name="karabas_order_id" value="" />
+                <input type="hidden" id="karabas_auth" name="karabas_auth" value="" />
+                <input type="hidden" id="event-id" name="event_id" value="49577" />
+                <input type="hidden" id="delivery_type" value="" />
+                <input type="hidden" id="payment_type" value="" />
+                <input type="hidden" id="delivery_price" value="" />
+                <input type="hidden" id="dis-total-ticket"  value="" />
+                <input type="hidden" id="dis-multi" value="" />
+                <input type="hidden" id="dis-amount" value="" />
+                <input type="hidden" id="dis-is-percents" value=""/>
+                <input type="hidden" id="dis-order" value="" />
+                <input type="hidden" id="is-multi-discount" value="" />
+                <input type="hidden" id="update-scheme-timestamp" value="1476043825" />
+                <input type="hidden" id="privat-pay-parts" name="privat_pay_parts" value="5" />
+                <div class="left-content">
+                    <div class="scheme-align">
+                        <div class="poster-block" style="background: url('https://v-ticket.com.ua/dynamic/event/049577_original.jpg?v=6bf3ddf46db5') center center no-repeat;"></div>
+                    </div>
+                </div>
+                <div class="right-content">
+                    <div class="ticket-types-wrap">
+
+
+                        <table class="ticket-types " cellspacing="0">
+                            <tbody>
+                            <tr rel="600.00" price="600.00  грн.  " class="type-424473">
+
+                                <td class="title">
+
+                                    <div class="ticket-color-block red"></div>
+                                    <p class="" >Вхідний квиток на 3 дні</p>
+                                </td>
+                                <td class="count soldout">SOLD OUT</td>
+                                <td class="price">600.00 <span>грн.</span> </td>
+                            </tr>
+                            <tr rel="660.00" price="660.00  грн.  " class="type-440076">
+
+                                <td class="title">
+
+                                    <div class="ticket-color-block blue"></div>
+                                    <p class="" >Вхідний квиток на 3 дні</p>
+                                </td>
+                                <td class="count soldout">SOLD OUT</td>
+                                <td class="price">660.00 <span>грн.</span> </td>
+                            </tr>
+                            <tr rel="200.00" price="200.00  грн.  " class="type-440077">
+
+                                <td class="title">
+
+                                    <div class="ticket-color-block green"></div>
+                                    <p class="" >Абонемент в наметове містечко на 1 персону</p>
+                                </td>
+                                <td class="count soldout">SOLD OUT</td>
+                                <td class="price">200.00 <span>грн.</span> </td>
+                            </tr>
+                            <tr rel="700.00" price="700.00  грн.  " class="type-445382">
+
+                                <td class="title">
+
+                                    <div class="ticket-color-block red"></div>
+                                    <p class="" >Вхідний квиток на 3 дні</p>
+                                </td>
+                                <td class="count">
+                                    <select class="amounts" name="amount[445382]" id="amount[445382]" rel="445382">
+                                        <option value="0"  selected="selected">0</option>
+                                        <option value="1" >1</option>
+                                        <option value="2" >2</option>
+                                        <option value="3" >3</option>
+                                        <option value="4" >4</option>
+                                        <option value="5" >5</option>
+                                        <option value="6" >6</option>
+                                        <option value="7" >7</option>
+                                        <option value="8" >8</option>
+                                        <option value="9" >9</option>
+                                    </select>
+                                </td>
+                                <td class="price">700.00 <span>грн.</span> </td>
+                            </tr>
+                            </tbody>
+                        </table>
+                        <div class="discount-information"></div>
+                        <div class="sector-text display-none"> Будь ласка, виберіть сектор, а потім - кількість квитків по комфортній для вас вартості (зі списку доступних типів). Ми автоматично підберемо для вас найкращі доступні місця вибраної категорії.</div>
+
+                        <div class="discount-wrap ">
+                            <div class="discounts">
+                                <p class="discount-trigger">Перевірити знижку</p>
+                                &nbsp;&nbsp;&nbsp;
+                                <span class="showToolTip" title=" Коди знижок зазвичай поширюються організаторами подій або їх партнерами, а також іноді розсилаються постійним клієнтам Concert.ua і V-Ticket.com.ua"><i class="muted help fa fa-question-circle"></i></span>
+                                <div class="discount-block">
+                                    <span>Введіть код знижки: </span>
+                                    <input class="discount-input" id="discount-code" type="text" name="discount-code" value="" autocomplete="off"/>
+                                    <input id="check-discount-button" value="Перевірити" type="button" flag="0" name="discount-check" class="checkout check-button btn btn_green right"/>
+                                    <input type="hidden" id="round-discound" value="">
+                                    <div class="captcha-block">
+                                        <script src="https://www.google.com/recaptcha/api.js?hl=ua" async defer></script><div class="g-recaptcha" data-sitekey="6Lf_-hoTAAAAABith90hu6ZgOgnhHH5yhJCrvOjv" data-theme="light" data-type="image" data-size="normal" data-tabIndex="0" data-attempts-is-exhausted="0" style="display:none"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <table class="order-information" cellspacing="0">
+                            <tr class="total-discount display-none">
+                                <th> Знижка:</th>
+                                <td class="prices-column"><span>0</span>грн.</td>
+                                <td><a class="delete-discount showToolTip" src="https://www.concert.ua/img/canvas/icon_close.png" alt="delete" title="видалити знижку" width="16" height="16"/></a></td>
+                            </tr>
+                            <tr class="total-price-with-discount  display-none">
+                                <th>Разом зі знижкою:</th>
+                                <td class="prices-column" colspan="2"><span>0</span>грн.</td>
+                            </tr>
+                            <tr class="fee" style="display: none">
+                                <th>Сервісний збір:</th>
+                                <td class="prices-column"><span>0.00</span> грн.</span> </td>
+                                <td>
+                                    <i class="muted help fa fa-question-circle showToolTip" title="Сервісний збір - це плата за послуги бронювання, а також за послуги фінансових установ з прийому та обробки платежу. Розмір варіюється залежно від події і вибраного способу оплати."></i>
+                                </td>
+                            </tr>
+                            <tr class="total tr-td-without-bottom-border" style="display: none;">
+                                <th>Загальна вартiсть квиткiв у замовленнi:</th>
+                                <td class="prices-column" colspan="2"><span>0.00</span> грн.</span> </td>
+                            </tr>
+                            <tr class="sub-total tr-td-without-bottom-border">
+                                <th><span id="amount-ticket">0</span></th>
+                                <td class="prices-column" colspan="2"><span>0.00</span> грн.</span> </td>
+                            </tr>
+                        </table>
+                    </div>
+                    <input id="checkout-firststep" name="checkout-button" value="продовжити" type="submit" class="checkout btn btn_green right"/>
+                    <input type="hidden" name="checkout" value="1"/>
+                </div>
+            </form>
+            <div id="dialog-window">
+                <a class="close-window close-modal"></a>
+                <div class="title"></div>
+                <div class="text"></div>
+                <div style="text-align: center;"><input value="ОК" type="button" class="checkout close-modal okey-button btn btn_green"/></div>
+            </div>
+
+            <div id="dialog-window-confirm">
+                <a class="close-window close-modal"></a>
+                <div class="title"></div>
+                <div class="text"></div>
+                <div style="text-align: center;">
+                    <input id="confirm-button" value="так" type="button" confirm-type="" class="checkout close-modal btn btn_green"/>
+                    <input value="відміна" type="button" class="checkout close-modal cancel-button btn btn_red"/>
+                </div>
+            </div>
+
+
+            <script type="text/javascript">
+                var google_tag_params = {
+                    dynx_itemid: "Zaxidfest 2017",
+                    dynx_pagetype: "offerdetail",
+                    dynx_totalvalue: 200
+                };
+            </script>
+
+            <script type="text/javascript">
+                /* <![CDATA[ */
+                var google_conversion_id = 971337950;
+                var google_custom_params = window.google_tag_params;
+                var google_remarketing_only = true;
+                /* ]]> */
+            </script>
+            <script type="text/javascript" src="//www.googleadservices.com/pagead/conversion.js">
+            </script>
+            <noscript>
+                <div style="display:inline;">
+                    <img height="1" width="1" style="border-style:none;" alt="" src="//googleads.g.doubleclick.net/pagead/viewthroughconversion/971337950/?value=0&amp;guid=ON&amp;script=0"/>
+                </div>
+            </noscript>
+
+
+            <input type="hidden" id="currency-440076" value="грн." />
+            <input type="hidden" id="currency-440077" value="грн." />
+            <input type="hidden" id="currency-445382" value="грн." />
+
+
+        </div>
+        <div class="clr"></div>
+    </div>
+
+    <div class="clear" style="height:260px;"></div>
+    <input type="hidden" id="language" value="ua">
+</div>
+<footer class="footer">
+    <div class="common">
+        <ul>
+            <li><a href="//concert.ua/ua/about_system">Про нас</a></li>
+            <li><a href="//concert.ua/ua/to_organizers">Організаторам</a></li>
+            <li><a href="//concert.ua/ua/review">Відгуки</a></li>
+            <li><a href="//concert.ua/ua/contactus">Контакти</a></li>
+            <li><a href="//concert.ua/ua/placeofsale">Каси</a></li>
+            <li><a href="//concert.ua/ua/places">Зали</a></li>
+        </ul>
+        <ul>
+            <li><a href="//concert.ua/ua/opt">Колективні замовлення</a></li>
+            <li><a href="//concert.ua/ua/guaranty_ticket">Гарантії</a></li>
+            <li><a href="//concert.ua/ua/payment_page">Способи оплати</a></li>
+            <li><a href="//concert.ua/ua/delivery">Доставка</a></li>
+            <li><a href="//concert.ua/ua/faq">Запитання та відповіді</a></li>
+        </ul>
+        <ul>
+            <li><a href="//concert.ua/ua/vozvrat">Повернення</a></li>
+            <li><a href="//concert.ua/ua/archive">Архів концертів</a></li>
+            <li><a href="//concert.ua/ua/sitemap">Карта сайту</a></li>
+            <li><a href="//concert.ua/ua/go-green">Зелена ініціатива</a></li>
+            <li><a href="//concert.ua/ua/offer">Публічна оферта</a></li>
+        </ul>
+        <div class="copyright">
+            <img src="https://www.concert.ua/img/logo_min.png" alt="" />
+            <p>&copy; 2016 Білетне Агентство Concert.ua</p>
+            <p>Всі права захищені.</p><br>
+            <p style="display:none;"><a href="https://concert.ua/sitemap.xml" target="_blank">КАРТА САЙТУ</a></p>
+            <div class="cards">
+                <a href="javascript:void(0)"><img src="https://www.concert.ua/img/logo_visa.png" alt="" /></a>
+                <a href="javascript:void(0)"><img src="https://www.concert.ua/img/logo_mastercard.png" alt="" /></a>
+            </div>
+        </div>
+    </div>
+</footer>
+
+<script src="https://cdn.gravitec.net/storage/2c23e68e62562ec8b4001baa8b9ec398/client.js" async></script>
+
+<script>
+    var Gravitec = Gravitec || [];
+    Gravitec.push(['setTags', ['2016', 'zahidfest', 'Львів', 'Біля Львова', 'WillCheckout', 'инди', 'поп-рок', 'рок']]);
+</script>
+
+<iframe src="//creativecdn.com/tags?id=pr_1shlCBWGqucnBUMvx0kI_basketstatus_49577" width="1" height="1" scrolling="no" frameBorder="0"></iframe>
+
+</body>
+</html>
